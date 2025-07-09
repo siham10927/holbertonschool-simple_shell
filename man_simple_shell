@@ -1,0 +1,89 @@
+.\" man page for hsh
+.TH MAN 7 2023-08-25 GNU "User Simple Shell Manual"
+
+.SH NAME
+hsh - Simple UNIX shell
+
+.SH SYNOPSIS
+#include "main.h"
+.br
+#include <stdlib.h>
+.br
+#include <stdio.h>
+.br
+#include <errno.h>
+.br
+#include <string.h>
+.br
+#include <unistd.h>
+.br
+#include <sys/types.h>
+.br
+#include <sys/wait.h>
+.br
+#include <sys/stat.h>
+.br
+#include <ctype.h>
+.br
+
+hsh
+
+.SH DESCRIPTION
+       
+HSH is a custom UNIX command line interpreter which built by C program. It supports built-in commands "env" and "exit", custom commands within the $PATH environment variables or existing path, and basic error handling and alerting.
+
+.SH INVOCATION
+
+Simple shell can be run in both interactive and non-interactive modes. 
+
+.SH COMMANDS
+
+Simple_shell supports below built-in commands:
+	
+.IP exit
+Exit simple shell with speficied status.
+
+.IP env
+Prints current environment variables.
+
+.SH OPTIONS AND ARGUMENTS
+The hsh command does not take any command line options or arguments.
+
+.SH EXAMPLES
+Interactive mode:
+.br
+$ ./hsh
+.br
+($) /bin/ls
+.br
+hsh main.c shell.c
+
+.br
+($) exit
+.br
+$
+.br	
+Non-interactive mode:
+.br
+$ echo "/bin/ls" | ./hsh
+.br
+hsh main.c shell.c test_ls_2
+.br	
+$ cat test_ls_2 | ./hsh
+.br
+hsh main.c shell.c test_ls_2
+.br
+hsh main.c shell.c test_ls_2
+.br
+
+.SH SEE ALSO
+bash(1), sh(1)
+
+.SH AUTHORS
+Chelsey Chia, Alicia Tan and Jessica Mo
+
+.SH REPORTING BUGS
+Please report bugs to the Github repository:https://github.com/siham10927/holbertonschool-simple_shell
+
+.SH COPYRIGHT
+This shell was created for educational purposes only.
