@@ -1,51 +1,40 @@
-." manpage for our simple shell
-
-.TH HSH 1 "09 jullay 2025" "Version 1.0" "General Command"
+.TH SIMPLE SHELL "version 1.0"
 
 .SH NAME
-.BI hsh
-- UNIX command interpreter (shell)
+    
+	hsh./-simple_shell
+
 .SH SYNOPSIS
-.BI hsh
-[command_string][argument]
+        - ".hsh" (interactive mode)
+	- "echo /bin/(command) | ./hsh" (non-interactive mode
 
 .SH DESCRIPTION
-.BI hsh
-is an simple UNIX command interpreter, that takes user input from standard input, interprets it, and finally executes it. it is also possible to execute interactively redirected the standard output of a command external to it by means of the pipe "|".
-.SS Bilt-in 
-functions integrated into this Shell
-.br
-.br
-- cd [DIRECTORY].
-.br
-- exit [STATUS].
-.br
-- env.
-.br
-- help [NAME BUILT-IN]
-.br
-- setenv [VARIABLE] [VALUE]
-.br
-- unsetenv [VARIABLE]
-.SH USAGE EXAMPLE
-.SS Normal mode
-$ ./hsh
-.br
-($) /bin/ls
-.br
-($) hsh main.c shell.c
-.br
-($) exit
-.br
-$
-.SS Interactive mode
-$ echo "/bin/ls" | ./hsh
-.br
-hsh main.c shell.c test_ls_2
-.br
-$
-.SH RETURN VALUE
-Success 0 or fail [1- 255]
 
-.SH AUTHORS
- Miguel Palacios, Manuel Puerta Villa
+        The ls command displays the contents of a directory. If no filename is specified, ls displays the contents of the current directory. Otherwise, ls displays the contents of the specified files.
+
+.SH COMPILATION
+
+	UBUNTU 20.04.4 LTS with GCC 9.4.0., and flags -Wall, -Werror, -Wextra, and -pedantic.
+
+.SH EXAMPLES
+
+	
+        root@user-name:~/holbertonschool-simple_shell# ./hsh
+
+	$ (enter your command here, for example ->  ls)
+
+	$ AUTHORS  README.md  man_1_simple_shell
+
+	$ pwd
+
+	$ /root/holbertonschool-simple_shell
+
+	$ exit
+	root@user-name:~/holbertonschool-simple_shell#
+
+.SH AUTHOR
+        The shell  was written BARUA SHAWAN and BRICE POITEVINEAU.
+
+
+.SH TRANSLATION
+        This manual page was translated by BARUA SHAWAN and BRICE POITEVINEAU <bricepoitevineau@gmail.com> <10927@holbertonstudents.com>.
