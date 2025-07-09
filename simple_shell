@@ -1,5 +1,5 @@
-#ifndef SHELL_H
-#define SHELL_H
+#ifndef SIMPLE_SHELL
+#define SIMPLE_SHELL
 
 #include <string.h>
 #include <stdlib.h>
@@ -72,4 +72,4 @@ int is_eof(char *str);
 int is_empty(char *str);
 int is_not_found(char *str);
 
-#endif /* SHELL_H */
+#endif /* SIMPLE_SHELL */
