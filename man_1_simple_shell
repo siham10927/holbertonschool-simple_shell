@@ -1,40 +1,38 @@
-.TH SIMPLE SHELL "version 1.0"
-
+.TH Simple_Shell "August 2023" "Simple Shell" "man Page-user manual"
 .SH NAME
-    
-	hsh./-simple_shell
-
+Simple Shell
 .SH SYNOPSIS
-        - ".hsh" (interactive mode)
-	- "echo /bin/(command) | ./hsh" (non-interactive mode
-
+.B #include\ "simple_shell.h"
+.PP
+.B Interactive mode:
+.PP
+$ ./hsh
+.TP
+($) /bin/ls
+.TP
+hsh main.c shell.c
+.TP
+($)
+.TP
+($) exit
+.TP
+$
+.PP
+.B Non-interactive mode:
+.PP
+$ echo "/bin/ls" | ./hsh
+.TP
+hsh main.c shell.c test_ls_2
+.TP
+$
+.SH COMPILE
+gcc -Wall -Werror -Wextra -pedantic -std=gnu89 *.c -o hsh
 .SH DESCRIPTION
-
-        The ls command displays the contents of a directory. If no filename is specified, ls displays the contents of the current directory. Otherwise, ls displays the contents of the specified files.
-
-.SH COMPILATION
-
-	UBUNTU 20.04.4 LTS with GCC 9.4.0., and flags -Wall, -Werror, -Wextra, and -pedantic.
-
-.SH EXAMPLES
-
-	
-        root@user-name:~/holbertonschool-simple_shell# ./hsh
-
-	$ (enter your command here, for example ->  ls)
-
-	$ AUTHORS  README.md  man_1_simple_shell
-
-	$ pwd
-
-	$ /root/holbertonschool-simple_shell
-
-	$ exit
-	root@user-name:~/holbertonschool-simple_shell#
-
-.SH AUTHOR
-        The shell  was written BARUA SHAWAN and BRICE POITEVINEAU.
-
-
-.SH TRANSLATION
-        This manual page was translated by BARUA SHAWAN and BRICE POITEVINEAU <bricepoitevineau@gmail.com> <10927@holbertonstudents.com>.
+In this home made version, Simple Shell is a command-line interpreter or
+a command-line interface that behaves like a Unix Shell.
+.SH RETURN
+Return "-1" on error with prompted error line message or "0" on success
+.SH BUGS
+none at the moment
+.SH AUTHORS
+Miguel Figuroa, Carlos Carrasquillo and Nadja Miranda
